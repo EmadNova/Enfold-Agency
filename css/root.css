@@ -1,20 +1,14 @@
 :root {
 
     /*colors*/
+    --primary-red: #eb4f61;
     --primary-main: #4a4a4a;
     --secondary-main: #45c0d6;
     --text-main: #f6f2f7;
-
-
     --white: #fff;
-
     --black: #000;
 
-
-
-    /*font-size*/
-    --main-title-desktop: 9.6rem;
-    --h2-desktop: 5.3rem;
-    --h3-desktop: 2.3rem;
-    --menu-desktop: 1.3rem;
+    /*font-family:*/
+    --oswald: "oswald", "arial", "sans-serif";
+    --barlow: "barlow", "arial", "sans-serif";
 }
