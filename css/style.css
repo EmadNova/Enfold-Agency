@@ -669,6 +669,9 @@ body {
   text-transform: uppercase;
 }
 
+.partners {
+  margin-bottom: 100px;
+}
 .partners .partners__info {
   display: flex;
   align-items: center;
@@ -732,6 +735,100 @@ body {
 .partners .partners__content .partners__content__img .partners__content__img__logo {
   width: 100%;
   height: 100%;
+}
+
+.events {
+  background-color: #F7F7F7;
+  padding: 200px 0;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+}
+.events .events__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 30px;
+  margin-bottom: 120px;
+}
+.events .events__info .events__info__title {
+  color: var(--primary-main);
+  font-size: 4.2rem;
+  font-family: var(--oswald);
+  font-weight: 500;
+  line-height: 46px;
+  margin-bottom: 50px;
+}
+.events .events__info .events__info__description {
+  color: var(--primary-main);
+  font-family: var(--barlow);
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.events .events__info .events__info__circle {
+  position: relative;
+}
+.events .events__info .events__info__circle .events__info__circle__icon {
+  color: var(--secondary-main);
+}
+.events .events__info .events__info__circle:after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: var(--secondary-main);
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translate(50%, 0px);
+}
+.events .events__info .events__info__circle:before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: var(--secondary-main);
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translate(-50%, 0px);
+}
+.events .events__example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.events .events__example .events__example__card {
+  position: relative;
+  margin-bottom: -2px;
+}
+.events .events__example .events__example__card .events__example__card__img {
+  width: 100%;
+  filter: grayscale(1) brightness(0.6);
+  object-fit: cover;
+  height: 300px;
+}
+.events .events__example .events__example__card .events__example__card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+}
+.events .events__example .events__example__card .events__example__card__text .events__example__card__text__title {
+  color: var(--white);
+  font-family: var(--oswald);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.events .events__example .events__example__card .events__example__card__text .events__example__card__text__description {
+  color: var(--white);
+  font-family: var(--barlow);
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 @keyframes arrow {
