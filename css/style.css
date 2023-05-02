@@ -54,8 +54,8 @@ html {
 .burger-menu-screen {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 100%;
+  right: -200%;
+  width: 350px;
   height: 100%;
   z-index: 50;
   background-color: var(--primary-red);
@@ -595,23 +595,29 @@ html {
   line-height: 26px;
   padding: 0 30px;
 }
-.swiper .swiper__content .swiper__content__img {
+.swiper .swiper__content .swiper__content__user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.swiper .swiper__content .swiper__content__user .swiper__content__img {
   text-align: center;
   width: 80px;
   height: 80px;
   margin-bottom: 20px;
 }
-.swiper .swiper__content .swiper__content__img .swiper__content__img__self {
+.swiper .swiper__content .swiper__content__user .swiper__content__img .swiper__content__img__self {
   width: 100%;
   border-radius: 50%;
 }
-.swiper .swiper__content .swiper__content__text .swiper__content__text__title {
+.swiper .swiper__content .swiper__content__user .swiper__content__text .swiper__content__text__title {
   color: var(--primary-main);
   font-size: 1.8rem;
   font-family: var(--barlow);
   margin-bottom: 8px;
 }
-.swiper .swiper__content .swiper__content__text .swiper__content__text__role {
+.swiper .swiper__content .swiper__content__user .swiper__content__text .swiper__content__text__role {
   color: #919191;
   font-family: var(--barlow);
   font-weight: 500;
@@ -736,7 +742,7 @@ html {
 .events {
   background-color: #F7F7F7;
   padding-top: 200px;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
 }
 .events .events__info {
   display: flex;
@@ -1068,6 +1074,42 @@ html {
   100% {
     transform: translateY(100%);
     opacity: 0;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    padding: 0 50px;
+  }
+  .burger-menu-icon {
+    transform: translate(-100%, 30px);
+  }
+  .help .help__info {
+    padding: 0 20px;
+  }
+  .help .help__cards .help__cards__inner {
+    padding: 0 36px;
+  }
+  .help .help__cards .help__cards__inner .help__card {
+    padding: 80px 42px;
+  }
+  .meet .meet__team .meet__team__main .meet__team__main__card {
+    padding: 0 30px;
+  }
+  .swiper .swiper__content .swiper__content__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .swiper .swiper__content .swiper__content__user .swiper__content__img {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  .successful-event {
+    padding: 180px 34px;
+  }
+  .footer .footer__data .footer__content .footer__content__info .footer__content__info__social .footer__content__info__social__text {
+    font-size: 1.5rem;
   }
 }
 
