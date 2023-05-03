@@ -83,6 +83,24 @@ html {
   right: 0;
 }
 
+.main__arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 10;
+}
+.main__arrow-down .main__arrow-down__self {
+  color: var(--secondary-main);
+  font-size: 5rem;
+  animation: 1.5s linear infinite arrow;
+  cursor: pointer;
+}
+
+.header__desktop {
+  display: none;
+}
+
 .main {
   background-image: url("../images/background.png"), linear-gradient(to bottom right, #5a72fc, #fb4d4d);
   background-color: #5a72fc;
@@ -95,9 +113,7 @@ html {
   flex-direction: column;
   min-height: 110vh;
   padding: 0 20px;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
 }
 .main .main__title {
   position: relative;
@@ -128,19 +144,6 @@ html {
   font-family: var(--barlow);
   font-weight: 400;
   font-size: 2.3rem;
-}
-.main .main__arrow-down {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 10;
-}
-.main .main__arrow-down .main__arrow-down__self {
-  color: var(--secondary-main);
-  font-size: 5rem;
-  animation: 1.5s linear infinite arrow;
-  cursor: pointer;
 }
 
 .help {
@@ -220,6 +223,7 @@ html {
   font-family: var(--oswald);
   font-weight: 300;
   text-transform: uppercase;
+  text-align: center;
 }
 .help .help__cards .help__cards__inner .help__card .help__card__description {
   margin-bottom: 70px;
@@ -250,6 +254,7 @@ html {
 .help .help__cards .help__cards__inner--blue .help__card--blue .help__card__title--blue .help__card__title__text--blue {
   color: var(--white);
   font-size: 1.8rem;
+  text-align: center;
 }
 .help .help__cards .help__cards__inner--blue .help__card--blue .help__card__description--blue .help__card__description__text--blue {
   color: var(--white);
@@ -326,7 +331,7 @@ html {
   justify-content: center;
   flex-direction: column;
 }
-.service .service__item .service__item__row .service__item__box {
+.service .service__item .service__item__box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,23 +339,23 @@ html {
   padding: 80px 50px;
   margin-bottom: 60px;
 }
-.service .service__item .service__item__row .service__item__box .service__item__box__icon {
+.service .service__item .service__item__box .service__item__box__icon {
   color: var(--white);
   font-size: 3.5rem;
   margin-bottom: 20px;
 }
-.service .service__item .service__item__row .service__item__box .service__item__box__title {
+.service .service__item .service__item__box .service__item__box__title {
   color: var(--white);
   font-size: 1.8rem;
   font-family: var(--oswald);
   margin-bottom: 10px;
 }
-.service .service__item .service__item__row .service__item__box .service__item__box__description {
+.service .service__item .service__item__box .service__item__box__description {
   color: rgba(255, 255, 255, 0.49);
   font-size: 1.4rem;
   font-family: var(--oswald);
 }
-.service .service__item .service__item__row .service__item__box:last-child {
+.service .service__item .service__item__box:last-child {
   margin-bottom: 0;
 }
 
@@ -484,35 +489,35 @@ html {
 .motto {
   background: linear-gradient(to bottom right, #3edbac, #16a6e8);
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 120px 20px;
   clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
   margin-bottom: 120px;
 }
-.motto .motto__title {
+.motto .motto__info .motto__title {
   margin-bottom: 40px;
 }
-.motto .motto__title .motto__title__text {
+.motto .motto__info .motto__title .motto__title__text {
   color: var(--white);
   font-family: var(--oswald);
   font-size: 4.4rem;
   font-weight: 400;
 }
-.motto .motto__description {
+.motto .motto__info .motto__description {
   margin-bottom: 80px;
 }
-.motto .motto__description .motto__description__text {
+.motto .motto__info .motto__description .motto__description__text {
   color: var(--white);
   font-family: var(--barlow);
   font-size: 2.4rem;
   line-height: 38px;
 }
-.motto .motto__button {
+.motto .motto__info .motto__button {
   margin-bottom: 50px;
 }
-.motto .motto__button .motto__button__self {
+.motto .motto__info .motto__button .motto__button__self {
   color: var(--white);
   border: 3px solid var(--white);
   padding: 14px 30px;
@@ -521,7 +526,7 @@ html {
   font-family: var(--barlow);
   text-transform: uppercase;
 }
-.motto .motto__image .motto__image__self {
+.motto .motto__pic .motto__image .motto__image__self {
   width: 100%;
 }
 
@@ -1076,24 +1081,21 @@ html {
     opacity: 0;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 480px) {
   .header {
     padding: 0 50px;
   }
   .burger-menu-icon {
     transform: translate(-100%, 30px);
   }
-  .help .help__info {
-    padding: 0 20px;
-  }
-  .help .help__cards .help__cards__inner {
-    padding: 0 36px;
-  }
-  .help .help__cards .help__cards__inner .help__card {
-    padding: 80px 42px;
+  .service {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
   }
   .meet .meet__team .meet__team__main .meet__team__main__card {
     padding: 0 30px;
+  }
+  .motto {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
   }
   .swiper .swiper__content .swiper__content__user {
     display: flex;
@@ -1105,11 +1107,337 @@ html {
     margin-bottom: 0;
     margin-right: 10px;
   }
+  .events .events__example .events__example__card .events__example__card__img {
+    width: 100%;
+    height: 480px;
+  }
   .successful-event {
     padding: 180px 34px;
   }
   .footer .footer__data .footer__content .footer__content__info .footer__content__info__social .footer__content__info__social__text {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    display: none;
+  }
+  .main__arrow-down {
+    transform: translate(-50%, 0);
+  }
+  .main {
+    min-height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+  .burger-menu-icon {
+    display: none;
+  }
+  .header__desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 0 40px;
+  }
+  .header__desktop .header__desktop__img {
+    width: 260px;
+    height: 90px;
+  }
+  .header__desktop .header__desktop__img .header__desktop__img__logo {
+    width: 100%;
+    height: 100%;
+  }
+  .header__desktop .header__desktop__menu .header__desktop__menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__desktop .header__desktop__menu .header__desktop__menu__list .header__desktop__menu__list__each {
+    margin-left: 16px;
+  }
+  .header__desktop .header__desktop__menu .header__desktop__menu__list .header__desktop__menu__list__each .header__desktop__menu__list__link {
+    color: var(--white);
+    font-family: var(--barlow);
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .main .main__title .main__title__text {
+    font-size: 3.8rem;
+  }
+  .help .help__info .help__info__title {
+    font-size: 6rem;
+  }
+  .help .help__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -60px;
+    padding: 0 30px;
+  }
+  .help .help__cards .help__cards__inner {
+    padding: 0;
+  }
+  .help .help__cards .help__cards__inner .help__card .help__card__title .help__card__title__text {
+    padding: 0 5px;
+    font-size: 2rem;
+    line-height: 22px;
+  }
+  .help .help__cards .help__cards__inner--blue .help__card--blue {
+    padding: 80px 44px;
+    border: none;
+  }
+  .help .help__cards .help__cards__inner--blue .help__card--blue .help__card__title--blue .help__card__title__text--blue {
+    font-size: 2.2rem;
+    line-height: 26px;
+  }
+  .service {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  }
+  .service .service__info {
+    margin-bottom: 100px;
+  }
+  .service .service__info .service__info__title {
+    font-size: 5rem;
+  }
+  .service .service__item .service__item__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .service .service__item .service__item__row .service__item__box {
+    padding: 40px 20px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 180px;
+  }
+  .meet {
+    padding: 150px 50px;
+  }
+  .meet .meet__info .meet__info__title {
+    font-size: 5rem;
+  }
+  .meet .meet__team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .meet .meet__team .meet__team__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .meet .meet__team .meet__team__main .meet__team__main__card {
+    padding: 10px;
+  }
+  .motto {
+    padding: 120px 50px;
+    align-items: flex-start;
+    flex-direction: row;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+  .motto .motto__info {
+    width: 60%;
+  }
+  .motto .motto__info .motto__title {
+    margin-bottom: 40px;
+  }
+  .motto .motto__info .motto__title .motto__title__text {
+    font-size: 5rem;
+  }
+  .motto .motto__info .motto__description {
+    margin-bottom: 80px;
+  }
+  .motto .motto__info .motto__description .motto__description__text {
+    color: var(--white);
+    font-family: var(--barlow);
+    font-size: 2.4rem;
+    line-height: 38px;
+  }
+  .motto .motto__info .motto__button {
+    margin-bottom: 50px;
+  }
+  .motto .motto__info .motto__button .motto__button__self {
+    color: var(--white);
+    border: 3px solid var(--white);
+    padding: 14px 30px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    font-family: var(--barlow);
+    text-transform: uppercase;
+  }
+  .motto .motto__pic {
+    width: 40%;
+  }
+  .motto .motto__pic .motto__image .motto__image__self {
+    width: 100%;
+  }
+  .swiper .swiper__info .swiper__info__title {
+    font-size: 5rem;
+  }
+  .action {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 140px 50px 180px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+  .action .action__clip {
+    width: 60%;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .action .action__text {
+    width: 40%;
+  }
+  .action .action__text .action__text__info {
+    margin-top: 30px;
+  }
+  .action .action__text .action__text__info .action__text__info__title {
+    font-size: 5rem;
+  }
+  .partners .partners__info .partners__info__title {
+    font-size: 5rem;
+  }
+  .partners .partners__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .partners .partners__content .partners__content__img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e1e1e1;
+  }
+  .partners .partners__content .partners__content__img .partners__content__img__logo {
+    width: 100%;
+    height: 100%;
+  }
+  .events {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+  }
+  .events .events__info .events__info__title {
+    font-size: 5rem;
+  }
+  .events .events__example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .events .events__example .events__example__card {
+    position: relative;
+    margin-bottom: -2px;
+  }
+  .events .events__example .events__example__card .events__example__card__img {
+    width: 192px;
+    filter: grayscale(1) brightness(0.6);
+    object-fit: cover;
+    height: 192px;
+  }
+  .events .events__example .events__example__card .events__example__card__text {
+    padding: 0 20px;
+  }
+  .events .events__example .events__example__card .events__example__card__text .events__example__card__text__title {
+    margin-bottom: 0;
+  }
+  .events .events__example .events__example__card .events__example__card__text .events__example__card__text__description {
+    display: none;
+  }
+  .successful-event {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  }
+  .successful-event .successful-event__info .successful-event__info__title {
+    font-size: 5rem;
+  }
+  .successful-event .successful-event__text {
+    padding: 0 150px;
+  }
+  .successful-event .successful-event__text .successful-event__text__description {
+    color: var(--white);
+    font-family: var(--barlow);
+    font-size: 2rem;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .successful-event .successful-event__text .successful-event__text__description:last-child {
+    margin-bottom: 0;
+  }
+  .footer .footer__info .footer__info__title {
+    font-size: 5rem;
+  }
+  .footer .footer__data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer__data .footer__content {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .footer .footer__data .footer__content .footer__content__img {
+    width: 400px;
+  }
+  .footer .footer__data .footer__content .footer__content__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .footer .footer__data .footer__content .footer__content__info .footer__content__info__social .footer__content__info__social__text {
+    font-size: 1.5rem;
+  }
+  .footer .footer__data .footer__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .footer__data .footer__form .footer__form__inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .footer .footer__data .footer__form .footer__form__inner .footer__form__input {
+    margin-bottom: 10px;
+  }
+  .footer .footer__data .footer__form .footer__form__inner .footer__form__input .footer__form__input__self {
+    width: 100%;
+    height: 45px;
+    font-family: var(--barlow);
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: #f6f2f7;
+    color: #919191;
+    border: none;
+    outline: none;
+  }
+  .footer .footer__data .footer__form .footer__form__inner .footer__form__input .footer__form__input__self--textarea {
+    height: 200px;
+    resize: none;
+  }
+  .footer .footer__data .footer__form .footer__form__inner .footer__form__button .footer__form__button__self {
+    display: block;
+    background-color: #45c0d6;
+    color: var(--white);
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--barlow);
+    padding: 16px 20px;
   }
 }
 
