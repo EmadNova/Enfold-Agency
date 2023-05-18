@@ -94,6 +94,47 @@ html {
   right: 0;
 }
 
+.burger-menu-icon--rotate--one {
+  animation: ease 0.5s rotate1 forwards;
+}
+
+.burger-menu-icon--rotate--two {
+  visibility: hidden;
+}
+
+.burger-menu-icon--rotate--three {
+  animation: ease 0.5s rotate3 forwards;
+}
+
+@keyframes rotate1 {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(-10px) rotate(135deg);
+  }
+}
+
 .main__arrow-down {
   position: absolute;
   bottom: 0;
@@ -390,37 +431,76 @@ html {
     justify-content: center;
     flex-direction: column;
 
-
-    .service__item__box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 80px 50px;
+    .service__item__row {
       margin-bottom: 60px;
 
-      .service__item__box__icon {
-        color: var(--white);
-        font-size: 3.5rem;
-        margin-bottom: 20px;
+      .service__item__box {
+        padding: 80px 50px;
+        position: relative;
+        margin-bottom: 60px;
+
+        .service__item__box__inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transition: all 0.4s ease;
+          cursor: pointer;
+
+          .service__item__box__front {
+            position: absolute;
+            backface-visibility: hidden;
+            text-align: center;
+
+            .service__item__box__icon {
+              color: var(--white);
+              font-size: 3.5rem;
+              margin-bottom: 20px;
+            }
+
+            .service__item__box__title {
+              color: var(--white);
+              font-size: 1.8rem;
+              font-family: var(--oswald);
+              margin-bottom: 10px;
+            }
+
+            .service__item__box__description {
+              color: rgba(255, 255, 255, 0.49);
+              font-size: 1.4rem;
+              font-family: var(--oswald);
+            }
+
+          }
+
+          .service__item__box__back {
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+
+            .service__item__box__back__text {
+              font-family: var(--barlow);
+              font-size: 1.5rem;
+              color: var(--white);
+              text-align: center;
+            }
+          }
+
+          &:hover {
+            transform: rotateY(180deg);
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
-      .service__item__box__title {
-        color: var(--white);
-        font-size: 1.8rem;
-        font-family: var(--oswald);
-        margin-bottom: 10px;
-      }
-
-      .service__item__box__description {
-        color: rgba(255, 255, 255, 0.49);
-        font-size: 1.4rem;
-        font-family: var(--oswald);
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }
@@ -554,6 +634,10 @@ html {
             font-size: 1.5rem;
             font-weight: 300;
           }
+        }
+
+        .meet__team__main__card__cover {
+
         }
       }
     }
@@ -1395,7 +1479,7 @@ html {
   }
 
   .main__arrow-down {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
   }
 
   .main {
@@ -1581,50 +1665,54 @@ html {
     flex-direction: row;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 
-    .motto__info {
-      width: 60%;
+    .motto__inner {
+      display: flex;
 
-      .motto__title {
-        margin-bottom: 40px;
+      .motto__info {
+        width: 60%;
 
-        .motto__title__text {
-          font-size: 5rem;
+        .motto__title {
+          margin-bottom: 40px;
+
+          .motto__title__text {
+            font-size: 5rem;
+          }
+        }
+
+        .motto__description {
+          margin-bottom: 80px;
+
+          .motto__description__text {
+            color: var(--white);
+            font-family: var(--barlow);
+            font-size: 2.4rem;
+            line-height: 38px;
+          }
+        }
+
+        .motto__button {
+          margin-bottom: 50px;
+
+          .motto__button__self {
+            color: var(--white);
+            border: 3px solid var(--white);
+            padding: 14px 30px;
+            border-radius: 3px;
+            font-size: 1.3rem;
+            font-family: var(--barlow);
+            text-transform: uppercase;
+          }
         }
       }
 
-      .motto__description {
-        margin-bottom: 80px;
+      .motto__pic {
+        width: 40%;
 
-        .motto__description__text {
-          color: var(--white);
-          font-family: var(--barlow);
-          font-size: 2.4rem;
-          line-height: 38px;
-        }
-      }
+        .motto__image {
 
-      .motto__button {
-        margin-bottom: 50px;
-
-        .motto__button__self {
-          color: var(--white);
-          border: 3px solid var(--white);
-          padding: 14px 30px;
-          border-radius: 3px;
-          font-size: 1.3rem;
-          font-family: var(--barlow);
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .motto__pic {
-      width: 40%;
-
-      .motto__image {
-
-        .motto__image__self {
-          width: 100%;
+          .motto__image__self {
+            width: 100%;
+          }
         }
       }
     }
@@ -1928,6 +2016,72 @@ html {
     }
   }
 
+  .meet {
+
+    .meet__team {
+
+      .meet__team__main {
+
+        .meet__team__main__card {
+
+          .meet__team__main__card__img {
+            position: relative;
+            cursor: pointer;
+            transition: 0.5s ease;
+
+            .meet__team__main__card__cover {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(236, 236, 236, 0.48);
+              display: none;
+              transition: 0.5s ease;
+            }
+
+            &:hover .meet__team__main__card__cover {
+              display: block;
+              border: 6px solid #cbcbcb;
+              border-radius: 4px;
+            }
+          }
+
+          .meet__team__main__card__social {
+            display: none;
+          }
+        }
+      }
+
+      .meet__team__main--sub {
+        margin-bottom: 60px;
+
+        .meet__team__main__card {
+
+          .meet__team__main__card__social {
+
+            .meet__team__main__card__social__icon--skype {
+              font-size: 1.4rem;
+            }
+
+            .meet__team__main__card__social__icon--facebook {
+              font-size: 1.1rem;
+            }
+
+            .meet__team__main__card__social__icon--youtube-etc {
+              font-size: 1.4rem;
+              margin-left: 10px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .swiper {
 
     .swiper__content {
@@ -2031,6 +2185,11 @@ html {
     .service__item {
       max-width: 1300px;
       margin: 0 auto;
+
+      .service__item__row {
+        margin-bottom: 100px;
+
+      }
     }
   }
 
@@ -2139,7 +2298,7 @@ html {
   }
 
   .events {
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
 
     .events__example {
       display: flex;
@@ -2153,8 +2312,8 @@ html {
         margin-bottom: -2px;
 
         .events__example__card__img {
-          width: 475px;
-          height: 475px;
+          width: 298px;
+          height: 298px;
         }
       }
     }
