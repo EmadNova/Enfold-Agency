@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Oswald&display=swap" rel="stylesheet">
+    <!--    swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -67,9 +71,12 @@
 <div class="main__arrow-down">
     <i class="fa-solid fa-angle-down main__arrow-down__self"></i>
 </div>
+<div class="arrowUp">
+    <i class="fa-solid fa-arrow-up arrowUp__icon"></i>
+</div>
 
 <section class="main">
-    <div class="main__title">
+    <div class="main__title" data-aos="zoom-in">
         <h1 class="main__title__text">A Full-Service Event Agency</h1>
     </div>
     <div class="main__description">
@@ -85,7 +92,7 @@
         </span>
     </div>
     <div class="help__cards">
-        <div class="help__cards__inner">
+        <div class="help__cards__inner" data-aos="zoom-in">
             <div class="help__card">
                 <div class="help__card__title">
                     <h5 class="help__card__title__text">
@@ -125,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <div class="help__cards__inner">
+        <div class="help__cards__inner" data-aos="zoom-in">
             <div class="help__card">
                 <div class="help__card__title">
                     <h5 class="help__card__title__text">
@@ -153,7 +160,7 @@
             <i class="fa-solid fa-circle service__info__circle__icon"></i>
         </span>
     </div>
-    <div class="service__item">
+    <div class="service__item" data-aos="zoom-in">
         <div class="service__item__row">
             <div class="service__item__box">
                 <div class="service__item__box__inner">
@@ -261,10 +268,14 @@
     </div>
     <div class="meet__team">
         <div class="meet__team__main">
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img">
                     <img class="meet__team__main__card__img__self" src="./images/picture.jpg" alt="user">
-                    <div class="meet__team__main__card__cover"></div>
+                    <div class="meet__team__main__card__cover">
+                        <div class="meet__team__main__card__cover__icon">
+                            <i class="fa-brands fa-twitter meet__team__main__card__cover__logo"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="meet__team__main__card__social">
                     <i class="fa-brands fa-twitter meet__team__main__card__social__icon"></i>
@@ -278,7 +289,7 @@
                     </h5>
                 </div>
             </div>
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img meet__team__main__card__img--exception">
                     <img class="meet__team__main__card__img__self" src="./images/picture2.jpg" alt="user">
                 </div>
@@ -296,10 +307,14 @@
             </div>
         </div>
         <div class="meet__team__main meet__team__main--sub">
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img">
                     <img class="meet__team__main__card__img__self" src="./images/picture3.jpg" alt="user">
-                    <div class="meet__team__main__card__cover"></div>
+                    <div class="meet__team__main__card__cover">
+                        <div class="meet__team__main__card__cover__icon">
+                            <i class="fa-brands fa-twitter meet__team__main__card__cover__logo"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="meet__team__main__card__social">
                     <i class="fa-brands fa-skype meet__team__main__card__social__icon meet__team__main__card__social__icon--skype"></i>
@@ -313,10 +328,14 @@
                     </h5>
                 </div>
             </div>
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img">
                     <img class="meet__team__main__card__img__self" src="./images/picture4.jpg" alt="user">
-                    <div class="meet__team__main__card__cover"></div>
+                    <div class="meet__team__main__card__cover">
+                        <div class="meet__team__main__card__cover__icon">
+                            <i class="fa-brands fa-twitter meet__team__main__card__cover__logo"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="meet__team__main__card__social">
                     <i class="fa-brands fa-square-facebook meet__team__main__card__social__icon meet__team__main__card__social__icon--facebook"></i>
@@ -330,10 +349,14 @@
                     </h5>
                 </div>
             </div>
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img">
                     <img class="meet__team__main__card__img__self" src="./images/picture5.jpg" alt="user">
-                    <div class="meet__team__main__card__cover"></div>
+                    <div class="meet__team__main__card__cover">
+                        <div class="meet__team__main__card__cover__icon">
+                            <i class="fa-brands fa-twitter meet__team__main__card__cover__logo"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="meet__team__main__card__social">
                     <i class="fa-brands fa-square-facebook meet__team__main__card__social__icon meet__team__main__card__social__icon--youtube-etc"></i>
@@ -349,7 +372,7 @@
                     </h5>
                 </div>
             </div>
-            <div class="meet__team__main__card">
+            <div class="meet__team__main__card" data-aos="zoom-in">
                 <div class="meet__team__main__card__img">
                     <img class="meet__team__main__card__img__self" src="./images/picture6.jpg" alt="user">
                 </div>
@@ -367,7 +390,7 @@
 </section>
 <section class="motto">
     <div class="motto__inner">
-        <div class="motto__info">
+        <div class="motto__info" data-aos="zoom-in">
             <div class="motto__title">
                 <h2 class="motto__title__text">
                     Our Philosophy
@@ -388,52 +411,157 @@
         </span>
             </div>
         </div>
-        <div class="motto__pic">
+        <div class="motto__pic" data-aos="zoom-in">
             <div class="motto__image">
                 <img class="motto__image__self" src="./images/colorful.png" alt="image">
             </div>
         </div>
     </div>
 </section>
-<section class="swiper">
-    <div class="swiper__info">
-        <h2 class="swiper__info__title">Testimonials</h2>
-        <h5 class="swiper__info__description">what our clients say</h5>
-        <span class="swiper__info__circle">
-            <i class="fa-solid fa-circle swiper__info__circle__icon"></i>
+<section class="swiperSection">
+    <div class="swiperSection__info">
+        <h2 class="swiperSection__info__title">Testimonials</h2>
+        <h5 class="swiperSection__info__description">what our clients say</h5>
+        <span class="swiperSection__info__circle">
+            <i class="fa-solid fa-circle swiperSection__info__circle__icon"></i>
         </span>
     </div>
-    <div class="swiper__content">
-        <div class="swiper__content__description">
-            <p class="swiper__content__description__text">
-                Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris nunc congue
-                nisi vitae suscipit tellus mauris a.
-            </p>
-        </div>
-        <div class="swiper__content__user">
-            <div class="swiper__content__img">
-                <img class="swiper__content__img__self" src="./images/picture4.jpg" alt="image">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiperSection__content">
+                    <div class="swiperSection__content__description">
+                        <p class="swiperSection__content__description__text">
+                            Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris
+                            nunc congue
+                            nisi vitae suscipit tellus mauris a.
+                        </p>
+                    </div>
+                    <div class="swiperSection__content__user">
+                        <div class="swiperSection__content__img">
+                            <img class="swiperSection__content__img__self" src="./images/picture4.jpg" alt="image">
+                        </div>
+                        <div class="swiperSection__content__text">
+                            <h4 class="swiperSection__content__text__title">
+                                Frank Eugene
+                            </h4>
+                            <h5 class="swiperSection__content__text__role">
+                                Marketing Manager
+                            </h5>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="swiper__content__text">
-                <h4 class="swiper__content__text__title">
-                    Frank Eugene
-                </h4>
-                <h5 class="swiper__content__text__role">
-                    Marketing Manager
-                </h5>
+            <div class="swiper-slide">
+                <div class="swiperSection__content">
+                    <div class="swiperSection__content__description">
+                        <p class="swiperSection__content__description__text">
+                            Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris
+                            nunc congue
+                            nisi vitae suscipit tellus mauris a.
+                        </p>
+                    </div>
+                    <div class="swiperSection__content__user">
+                        <div class="swiperSection__content__img">
+                            <img class="swiperSection__content__img__self" src="./images/picture4.jpg" alt="image">
+                        </div>
+                        <div class="swiperSection__content__text">
+                            <h4 class="swiperSection__content__text__title">
+                                Frank Eugene
+                            </h4>
+                            <h5 class="swiperSection__content__text__role">
+                                Marketing Manager
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperSection__content">
+                    <div class="swiperSection__content__description">
+                        <p class="swiperSection__content__description__text">
+                            Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris
+                            nunc congue
+                            nisi vitae suscipit tellus mauris a.
+                        </p>
+                    </div>
+                    <div class="swiperSection__content__user">
+                        <div class="swiperSection__content__img">
+                            <img class="swiperSection__content__img__self" src="./images/picture4.jpg" alt="image">
+                        </div>
+                        <div class="swiperSection__content__text">
+                            <h4 class="swiperSection__content__text__title">
+                                Frank Eugene
+                            </h4>
+                            <h5 class="swiperSection__content__text__role">
+                                Marketing Manager
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperSection__content">
+                    <div class="swiperSection__content__description">
+                        <p class="swiperSection__content__description__text">
+                            Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris
+                            nunc congue
+                            nisi vitae suscipit tellus mauris a.
+                        </p>
+                    </div>
+                    <div class="swiperSection__content__user">
+                        <div class="swiperSection__content__img">
+                            <img class="swiperSection__content__img__self" src="./images/picture4.jpg" alt="image">
+                        </div>
+                        <div class="swiperSection__content__text">
+                            <h4 class="swiperSection__content__text__title">
+                                Frank Eugene
+                            </h4>
+                            <h5 class="swiperSection__content__text__role">
+                                Marketing Manager
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperSection__content">
+                    <div class="swiperSection__content__description">
+                        <p class="swiperSection__content__description__text">
+                            Arcu cursus vitae congue mauris rhoncus aenean. Fusce id velit ut tortor. Consequat mauris
+                            nunc congue
+                            nisi vitae suscipit tellus mauris a.
+                        </p>
+                    </div>
+                    <div class="swiperSection__content__user">
+                        <div class="swiperSection__content__img">
+                            <img class="swiperSection__content__img__self" src="./images/picture4.jpg" alt="image">
+                        </div>
+                        <div class="swiperSection__content__text">
+                            <h4 class="swiperSection__content__text__title">
+                                Frank Eugene
+                            </h4>
+                            <h5 class="swiperSection__content__text__role">
+                                Marketing Manager
+                            </h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </section>
 <section class="action">
     <div class="action__inner">
-        <div class="action__clip">
+        <div class="action__clip" data-aos="zoom-in">
             <video class="action__clip__frame" controls>
                 <source src="video/clip.mp4" type="video/mp4">
                 Your browser does not support this video
             </video>
         </div>
-        <div class="action__text">
+        <div class="action__text" data-aos="zoom-in">
             <div class="action__text__info">
                 <h5 class="action__text__info__title">
                     In Action
@@ -458,8 +586,8 @@
             <i class="fa-solid fa-circle partners__info__circle__icon"></i>
         </span>
     </div>
-    <div class="partners__content">
-        <div class="partners__content__img">
+    <div class="partners__content" data-aos="zoom-in">
+        <div class="partners__content__img partners__content__img--big">
             <img class="partners__content__img__logo" src="./images/logo-bb.png" alt="logo">
         </div>
         <div class="partners__content__img">
@@ -474,7 +602,7 @@
         <div class="partners__content__img">
             <img class="partners__content__img__logo" src="./images/logo-woo.png" alt="logo">
         </div>
-        <div class="partners__content__img">
+        <div class="partners__content__img partners__content__img--big">
             <img class="partners__content__img__logo" src="./images/logo-refresh.png" alt="logo">
         </div>
         <div class="partners__content__img">
@@ -598,7 +726,7 @@
             <i class="fa-solid fa-circle successful-event__info__circle__icon"></i>
         </span>
     </div>
-    <div class="successful-event__text">
+    <div class="successful-event__text" data-aos="zoom-in">
         <p class="successful-event__text__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Dictum non
@@ -621,14 +749,14 @@
     </div>
 </section>
 <footer class="footer">
-    <div class="footer__info">
+    <div class="footer__info" data-aos="zoom-in">
         <h2 class="footer__info__title">Get in touch</h2>
         <h5 class="footer__info__description">we would love to hear from you</h5>
         <span class="footer__info__circle">
             <i class="fa-solid fa-circle footer__info__circle__icon"></i>
         </span>
     </div>
-    <div class="footer__data">
+    <div class="footer__data" data-aos="zoom-in">
         <div class="footer__content">
             <img class="footer__content__img" src="./images/colorful-void.png" alt="pic">
             <div class="footer__content__info">
@@ -673,6 +801,24 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 <script src="https://kit.fontawesome.com/34d303a25b.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>

@@ -4,7 +4,15 @@ const rotateOne = document.querySelector(".burger-menu-icon__line--one")
 const rotateTwo = document.querySelector(".burger-menu-icon__line--two")
 const rotateThree = document.querySelector(".burger-menu-icon__line--three")
 const arrow = document.querySelector(".main__arrow-down");
+const arrowUp = document.querySelector(".arrowUp");
 
+
+arrowUp.addEventListener("click", () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth",
+    })
+})
 
 burgerIcon.addEventListener("click", () => {
     burgerScreen.classList.toggle("active-burger-menu-screen");
@@ -15,10 +23,12 @@ burgerIcon.addEventListener("click", () => {
 
 arrow.addEventListener("click", () => {
     window.scroll({
-        top: 760,
+        top: 950,
         behavior: "smooth",
     })
 })
+
+
 
 
 //
