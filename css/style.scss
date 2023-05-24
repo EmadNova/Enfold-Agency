@@ -10,6 +10,7 @@ html {
   font-size: 10px;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 .header {
@@ -75,12 +76,15 @@ html {
     .burger-menu-screen__list {
 
       .burger-menu-screen__list__each {
-        color: var(--white);
-        font-family: var(--oswald);
-        font-size: 1.5rem;
         cursor: pointer;
-        text-transform: uppercase;
         margin-bottom: 30px;
+
+        .burger-menu-screen__list__target {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          color: var(--white);
+          font-family: var(--oswald);
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -155,6 +159,7 @@ html {
 }
 
 .arrowUp {
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -2042,6 +2047,19 @@ html {
 }
 
 @media (min-width: 1024px) {
+
+  .header__desktop {
+
+    .header__desktop__menu {
+
+      .header__desktop__menu__list {
+
+        .header__desktop__menu__list__each {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
 
   .main {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
